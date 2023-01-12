@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Experiences</title>
+    <link rel="stylesheet" href="assest/css/style.css">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Poppins'>
+    <style>
+	body
+        {
+          background-image: url("assest/image/abstractbg.jpg");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+       
+         *{
+            box-sizing: border-box;      
+         }      
+        .column 
+          {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+          }
+        .row::after 
+          {
+            content: "";
+            clear: both;
+            display: table;
+          }
+        .collapsible 
+          {
+            background-color: black;
+            color: #fdcfb3;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline-width: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: 'Poppins';
+          }  
+        .active, .collapsible:hover 
+          {
+            background-color: #cec8ef;
+            color: black;
+          }
+        .content 
+          {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f9f7e8;
+          }
+        p
+          {
+            line-height: 1.6;
+            font-size: 16px;
+            text-indent: 50px ;
+            text-align: justify;
+          }
+        @media screen and (max-width: 900px) 
+          {
+        .column 
+          {
+            width: 100%;
+            padding: 5px;
+          }
+          }
+    </style>
+  </head>
+  <body>
+    <h2>Experiences</h2>
+      <h3>Working Experiences</h3>
+          <!--Collapsible tripple sets, paraghaph and table-->
+          <button type="button" class="collapsible">&#128315 Click here to read my full experiences of working &#10084</button>
+            <div class="content">
+           		<p>First and foremost, my working experience has been limited to part-time labour. My employment began in 2017. My father has a restaurant called Lebai Roti Canai. Because the firm is owned by my father, my brother and I will assist him in running it. My brother and I both work as cashiers and waiters. We only conduct this job on weekends during the school year. After SPM, I began working at another food business owned by my friend's uncle. The company's name is Laksa Power, and it is a well-known food stand in Langkawi. It is located near the beach and behind the Langkawi Airport. My companion and I work as waitresses and cleaners.After finishing my STAM studies in 2018, I began working for a company called Haji Ismail Group, which is also based in Langkawi. This enterprise was one of the most well-known tourist attractions in Langkawi. The company sells luggage, beautiful plates and cookware, and the most interesting part is chocolate. I worked for this company for six months before to the epidemic while pursuing my studies. </p>
+            </div>
+            <br>
+                    <!--Scripting of collapsible-->
+                    <script>
+                    var coll = document.getElementsByClassName("collapsible");
+                    var i; 
+                    for (i = 0; i < coll.length; i++) {
+                      coll[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.display === "block") {
+                          content.style.display = "none";
+                        } else {
+                          content.style.display = "block";
+                        }
+                        });
+                    }
+                    </script>
+  </body>
+</html>

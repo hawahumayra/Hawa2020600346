@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Biodata</title>
+    <link rel="stylesheet" href="assest/css/style.css">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Poppins'>
+    <style>
+	body
+        {
+          background-image: url("assest/image/abstractbg.jpg");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+        *{
+          box-sizing: border-box;
+        }
+      /* Adjusting the width and position of polaroid */
+      .wrapper 
+        {
+          width: 100%;
+          text-align: center;
+        }
+      
+      /* Table for biodata */
+      table, th, td
+        {
+          width: 80%; 
+          margin-left: auto; 
+          margin-right: auto; 
+          margin-top: 35px;
+          border: 1px solid black;
+          border-collapse: separate;  
+        }
+      th
+        {
+          background-color: #cec8e4;
+          color: black;
+          width: 50%;        
+        }
+      th, td  
+        {
+          padding: 10px;
+        }
+      td
+        {
+          text-align: left;
+	    color: white;
+          background-color: #097969;   
+        }
+       td:hover
+        {
+          background-color: #000000;
+        }
+      /* Side by side images */
+      .column 
+        {
+          float: left;
+          width: 33.33%;
+          padding: 5px;
+        }
+      .row::after 
+        {
+          content: "";
+          clear: both;
+          display: table;
+        }
+      .content 
+        {
+          padding: 0 15px;
+          display: none;
+          overflow: hidden;
+        }
+      p
+        {
+          line-height: 1.5;
+          font-size: 14px;
+          text-indent: 50px ;
+          text-align: justify;
+        }
+      ul li
+        {
+          font-size: 14px;
+          line-height: 1.5;
+        }
+      /* Adjust the skills container */
+      .container 
+        {
+          width: 80%;
+          background-color: #AFE1AF;
+          margin-left: auto; 
+          margin-right: auto; 
+        }
+      /* Adjust the skills texts */
+      .skills
+        {
+          text-align: center;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          color: white;
+          font-weight: bold;
+        }
+      /* First skill */
+      .creativity 
+        {
+          width: 90%; 
+          background-color: #097969;
+        }
+      /* Second skill */
+      .teamwork 
+        {
+          width: 85%; 
+          background-color: #097969;
+        }
+      /* Third skill */
+      .problemsolving 
+        {
+          width: 80%; 
+          background-color: #097969;
+        }
+      /* Fourth skill */
+      .communication 
+        {
+          width: 50%; 
+          background-color: #097969
+        }
+      @media screen and (max-width: 900px) 
+        {
+      /* Make the polaroid and images look full size in straight line when the screen become smaller  */
+      .item 
+        {
+          width: 100%;
+        }
+      .column 
+        {
+          width: 100%;
+        }
+        }
+    </style>
+  </head> 
+
+  <body>
+    
+    <!--Table with rowspan-->
+<h2> My Biodata </h2>
+    <table style="width:65%; margin-top: 35px">
+      <tr>
+          <th>Name</td>
+          <td>Siti Hawa Humayra Binti Mohd Fahizal</td>
+      </tr>
+      <tr>
+          <th>Age</th>
+          <td>21 years old</td>
+      </tr>
+      <tr>
+          <th>Nationality</th>
+          <td>Malaysia</td>
+      </tr>
+      <tr>
+          <th>Religion</th>
+          <td>Islam</td>
+      </tr>
+      <tr>
+          <th>Races</th>
+          <td>Malay</td>
+      </tr>
+      <tr>
+          <th>Date of Birth</th>
+          <td>13 August 2001</td>
+      </tr>
+      <tr>
+          <th>Place of Birth</th>
+          <td>Sungai Petani,Kedah</td>
+      </tr>
+      <tr>
+          <th>Home Address</th>
+          <td>Lot 105 Taman Langkawi, Jalan Padang Gaong 07000 Langkawi Kedah</td>
+      </tr>
+      <tr>
+          <th rowspan="2">Favorite drink</th>
+          <td>Matcha Tea</td>
+      </tr>
+      <tr>
+          <td>Starbucks Caramel Frappucino</td>
+      </tr>
+      <tr>
+          <th rowspan="2">Favorite food</th>
+          <td>Malay Food</td>
+      </tr>
+      <tr>
+          <td>Western Food(Steaks)</td>
+      </tr>
+      <tr>
+          <th>Number of family members</th>
+          <td>2 (include me)</td>
+      </tr>
+      <tr>
+          <th>Status inside family</th>
+          <td>Youngest daughter</td>
+      </tr>
+      <tr>
+          <th>Number of siblings</th>
+          <td>1 brother (exclude me)</td>
+      </tr>
+      <tr>
+        <th>Education status</th>
+        <td>Diploma-level students</td>
+    </tr>
+    </table>
+    <br>
+
+ <!--Skills-->
+    <h2>My Skills</h2>
+        <h4 style="text-align: center">Creativity</h4>
+          <div class="container">
+              <div class="skills creativity">90%</div>
+          </div>
+        <h4 style="text-align: center">Teamwork Skills</h4>
+          <div class="container">
+              <div class="skills teamwork">85%</div>
+          </div> 
+        <h4 style="text-align: center">Problem Solving</h4>
+          <div class="container">
+            <div class="skills problemsolving">80%</div>
+          </div>
+        <h4 style="text-align: center">Communication Skills</h4>
+          <div class="container">
+            <div class="skills communication">50%</div>
+          </div>
+
+    <h2>My Hobby</h2>
+      <!--Side by Side Images-->
+      <div class= "row">
+          <div class= "column">
+            <img src="assest/image/hobbylisteningsong.jpg" alt="hobbylisteningsong" style="width: 100%" height="100%">
+          </div>
+          <div class= "column">
+            <img src="assest/image/hobbywatchingmovie.jpg" alt="hobbywatchingmovie" style="width: 100%" height="100%">
+          </div>
+          <div class= "column">
+            <img src="assest/image/hobbyhealingbeach.jpg" alt="hobbyhealingbeach" style="width: 100%" height="70%">
+          </div>
+      </div> 
+    
+      <!--Header, paraghaph and unordered lists from different types-->
+      <h3>Listening to Songs</h3>
+      <p>My favorite hobby is music listening. This may be true for other people, particularly when accomplishing work or assignments, as well as when walking or travelling. Ballad songs in any language are my preferred form of music. What tune I listen to is also determined by my feelings. My top artists come from boy bands and solo artists. When I listen to something, it makes me more focused, awake, and motivated to perform my work.</p>
+        <h4>My lists of favourite artist:</h4>
+          <ul>
+            <li>Day6.</li>
+            <li>Cnblue.</li>
+            <li>The Weekend.</li>
+            <li>The Black Skirts.</li>
+            <li>Lee Jieun (IU).</li>
+            <li>Stayc.</li>
+          </ul>
+        <h4>My lists of top playlist:</h4>
+          <ul>
+            <li><b>Everything Type Vibe</b> by Yon Spotify.</li>
+            <li><b>Stayc</b> by Stayc Spotify.</li>
+            <li><b>Day6</b> by Day6 Spotify.</li>
+            <li><b>IU</b> by IU Spotify.</li>
+		<li><b>Keshi Vibes</b> by Kevin Kim Spotify.</li>
+		<li><b>Bruno Mars</b> by Bruno Mars Spotify.</li>
+          </ul>
+  
+    <h3>Watch Movies</h3>
+      <p>My next hobby is in viewing movies. My favourite movie genres to watch are thrillers, comedies, and dramas. The majority of the movies I watch are Korean and Chinese. I also enjoy zombie movies so much that I can claim to have seen every zombie film ever made.</p>
+        <h4>Recommended zombie movies:</h4>
+          <ul class="a" type="circle">
+            <li><b>Alive</b></li>
+            <li><b>Odd Family: Zombie on Sale</b></li>
+            <li><b>Rampant</b></li>
+            <li><b>Train to Busan</b></li>
+		<li><b>Peninsula</b></li>
+		<li><b>Kingdom</b></li>
+          </ul>
+        <h4>Recommended other movies:</h4>
+          <ul type="circle">
+            <li><b>My Annoying Brother</b></li>
+            <li><b>Hope</b></li>
+            <li><b>Time To Hunt</b></li>
+            <li><b>Emergency Declaration</b></li>
+		<li><b>Decibel</b></li>
+		<li><b>On Your Wedding Day</b></li>
+          </ul>
+   <h3>Healing</h3>
+      <p>My third hobby is healing, which I generally do at the beach. When I'm having a bad day and need some space. I'm going to the beach to enjoy the sunset, sunrise, and the clear water. The breeze helped take away my misery..</p>
+        <h4>Lists of beach that i always go:</h4>
+          <ul type="square">
+            <li><b>Tanjung Rhu</b> at Langkawi.</li>
+            <li><b>Pasir Hitam</b> at Langkawi.</li>
+            <li><b>Tanjung Dawai</b></li>
+          </ul>
+        <br>  
+  </body>
+</html>

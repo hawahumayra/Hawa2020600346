@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Others</title>
+    <link rel="stylesheet" href="assest/css/style.css">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Poppins'>
+    <style>
+	body
+        {
+          background-image: url("assest/image/abstractbg.jpg");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+       
+      /* Adjusting the side by side images */
+      .column 
+        {
+          float: left;
+          width: 32.43%;
+          padding: 6.5px; 
+        }
+      .row::after 
+        {
+          content: "";
+          clear: both;
+          display: table;
+        }
+      /* Slideshow container */
+      .slideshow-container 
+        {
+          position: relative;
+        }
+      /* Slides */
+        .mySlides 
+        {
+          display: none;
+          padding: 80px;
+          text-align: center;
+        }
+      /* Next & previous buttons */
+      .prev, .next 
+        {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          margin-top: -30px;
+          padding: 16px;
+          color: black;
+          font-weight: bold;
+          font-size: 20px;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+        }
+      /* Position the "next button" to the right */
+      .next 
+        {
+          position: absolute;
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover, .next:hover 
+        {
+          background-color: rgba(0,0,0,0.8);
+          color: #cec8e4;
+        }
+      /* The dot/bullet/indicator container */
+      .dot-container 
+        {
+          text-align: center;
+          padding: 20px;
+          background: #fdcfb3;
+        }
+      /* The dots/bullets/indicators */
+      .dot 
+        {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: black;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+      /* Add a background color to the active dot/circle */
+      .active, .dot:hover 
+        {
+          background-color: #f9f7e8;
+        }
+      /* Adjusting the quotes style */
+      q 
+        {
+          font-size: 20px; 
+          font-style: italic; 
+          font-weight: bold; 
+          color: black;
+        }
+      /* Styling the author text */
+      .author
+        {
+          color: black; 
+          font-weight: bold;
+        }
+      @media screen and (max-width: 900px) 
+        {
+
+      .column 
+        {
+          width: 100%;
+          text-align: center;
+        }
+        }
+    </style>
+  </head>
+  <body>
+ 	<h2>Quotes I LoveS</h2>
+        <h3><span style='font-size:50px;'>&#129505</span></h3>
+
+              <!--Slideshow container for quotes-->        
+              <div class="slideshow-container" style="background-color: #F8DE7E">
+                <div class="mySlides">
+                  <q>Don't promise when you're happy, Don't reply when you're angry, and don't decide when you're sad.</q>
+                    <p class="author">- Ziad K. Abdelnour</p>
+                </div> 
+                <div class="mySlides">
+                  <q>Self-belief and hard work will always earn you success.</q>
+                    <p class="author">- Virat Kohli</p>
+                </div> 
+                <div class="mySlides">
+                  <q>Success is the sum of small efforts, repeated.</q>
+                      <p class="author">- R. Collier</p>
+                </div>
+                <div class="mySlides">
+                  <q>Patience is a pillar of faith.</q>
+                    <p class="author">- Hz Umar Ibn al-Khattab</p>
+                </div>
+                <div class="mySlides">
+                  <q>Do not grieve, indeed Allah is with us.</q>
+                    <p class="author">- Surah Al Tawbah: 40</p>
+                </div>
+                <div class="mySlides">
+                  <q>If you want to bring happiness to the world, go home and love your family.</q>
+                    <p class="author">- Mother Teresa</p>
+                </div>
+                <div class="mySlides">
+                  <q>Love is that condition in which the happiness of another person is essential to your own.</q>
+                    <p class="author">- Robert A. Heinlein</p>
+                </div>
+                <div class="mySlides">
+                  <q>Do something today that your future self will thank you for.</q>
+                    <p class="author">- Sean Patrick Flanery</p>
+                </div>
+                <div class="mySlides">
+                  <q>A big business starts small.</q>
+                    <p class="author">- Richard Branson</p>
+                </div>
+                <div class="mySlides">
+                  <q>Take risks. Failure is a stepping stone to success.</q>
+                    <p class="author">- Arianna Huffington</p>
+                </div>
+                      <!--Next or previous click for next quotes-->    
+                      <a class="prev" onclick="plusSlides(-1)">❮</a>
+                      <a class="next" onclick="plusSlides(1)">❯</a>          
+              </div>
+                        <!--Dot container-->    
+                        <div class="dot-container">
+                          <span class="dot" onclick="currentSlide(1)"></span> 
+                            <span class="dot" onclick="currentSlide(2)"></span> 
+                            <span class="dot" onclick="currentSlide(3)"></span> 
+                            <span class="dot" onclick="currentSlide(4)"></span> 
+                            <span class="dot" onclick="currentSlide(5)"></span> 
+                            <span class="dot" onclick="currentSlide(6)"></span> 
+                            <span class="dot" onclick="currentSlide(7)"></span> 
+                            <span class="dot" onclick="currentSlide(8)"></span> 
+                            <span class="dot" onclick="currentSlide(9)"></span> 
+                            <span class="dot" onclick="currentSlide(10)"></span> 
+                        </div>
+
+      <!--Scripting for slides quotes-->   
+      <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+          }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+        }
+      </script>
+  </body>
+</html>

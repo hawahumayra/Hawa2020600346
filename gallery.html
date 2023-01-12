@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="assest/css/style.css">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Poppins'>
+    <style>
+	body
+        {
+          background-image: url("assest/image/abstractbg.jpg");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+       
+      * {
+            box-sizing: border-box;
+        }
+      .row 
+        {
+          margin: 8px -12px;
+        }
+      /* Add padding between each column */
+      .row,
+      .row > .column 
+        {
+          padding: 5px;
+        }
+      /* Create three equal columns that floats next to each other */
+      .column
+        {
+          float: left;
+          width: 33.33%;
+          display: none; /* Hide all elements by default */
+        }
+      /* Clear floats after rows */
+      .row:after 
+        {
+          content: "";
+          display: table;
+          clear: both;
+        }
+      /* Content */
+      .content 
+        {
+          background-color: #cec8e4;
+          padding: 6px;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+      /* The "show" class is added to the filtered elements */
+      .show 
+        {
+          display: block;
+        }
+      /* Style the buttons */
+      .btn 
+        {
+          border: none;
+          outline: none;
+          padding: 12px 16px;
+          background-color: #fdcfb3;
+          cursor: pointer;
+          font-weight: bold;
+          font-family: 'Poppins';
+        }
+      .btn:hover 
+        {
+          background-color: #cec8e4;
+          color: white;
+          font-weight: bold;
+        }
+      .btn.active 
+        {
+          background-color: #cec8e4;
+          color: black;
+          font-weight: bold;
+        }
+      h4
+        {
+          text-align: center;  
+          margin-top: 20px;
+        }
+      /* Adjust the filtering buttons */
+      .myBtnContainer
+      {
+          margin-left: 10px;
+          margin-right: 10px;
+          margin-top: 10px;
+          text-align: center;
+      }
+      @media screen and (max-width: 900px) 
+      {
+      /* Make the picture appear in full size when the screen become small */
+      .column 
+      {
+          width: 100%;
+      }
+      }
+    </style>
+  <body>
+    <h2>Gallery</h2>
+      <!--Button filtering-->
+      <div class="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('picture of myself')"> Picture of Myself</button>
+        <button class="btn" onclick="filterSelection('my family')"> My family</button>
+        <button class="btn" onclick="filterSelection('my friends')">My Friends</button>
+      </div>
+
+      <!--Portfolio gallery grid-->
+      <!--Inserting picture in polaroid-->
+      <div class="row">
+        <div class="column picture of myself">
+          <div class="content">
+            <img src="assest/image/profilepic3.jpeg" alt="Picture of me" title="2" style="width: 100%" class="responsive">
+            </div>
+        </div>
+        <div class="column picture of myself">
+          <div class="content">
+            <img src="assest/image/profilepic4.jpeg" alt="Picture of me" title="3" style="width: 100%" class="responsive" >
+          </div>
+        </div>
+        </div>
+        <div class="column my family">
+          <div class="content">
+            <img src="assest/image/familypic1.jpeg" alt="father" title="1" style="width:100%">
+              <h4>&#x1F495</h4>
+          </div>
+        </div>
+        <div class="column my family">
+          <div class="content">
+            <img src="assest/image/familypic2.jpeg" alt="mother" title="2" style="width:100%">
+            <h4>&#x1F495</h4>
+          </div>
+        </div>
+        <div class="column my family">
+          <div class="content">
+            <img src="assest/image/familypic3.jpeg" alt="brother" title="3" style="width:100%">
+            <h4>&#x1F495</h4>
+          </div>
+        </div>
+        </div>
+        <div class="column my family">
+          <div class="content">
+           <img src="assest/image/familypic5.jpeg" alt="Picture of us" title="5" style="width:100%">
+              <h4>&#x1F495</h4>
+          </div>
+        </div>
+	<div class="column my friends">
+          <div class="content">
+            <img src="assest/image/friendspic1.jpeg" alt="father" title="1" style="width:100%">
+              <h4>&#x1F495</h4>
+          </div>
+        </div>
+        <div class="column my friends">
+          <div class="content">
+            <img src="assest/image/friendspic3.jpeg" alt="brother" title="3" style="width:100%">
+            <h4>&#x1F495</h4>
+          </div>
+        </div>
+        <div class="column my friends">
+          <div class="content">
+            <img src="assest/image/friendspic4.jpeg" alt=" brother" title="4" style="width:100%">
+              <h4>&#x1F495</h4>
+          </div>
+
+          <video width="500" height="500" controls>
+            <source src="assest/video/friendsvid.mp4" type="video/mp4" alt="Video of my friends"
+            Your browser does not support the video tag.
+          </video>
+        </div>
+       
+        <!--Insert audio-->
+        <div class="column my friends">
+          <audio controls>
+            <source src="assest/audio/Lily Of The Valley-Daniel.mp3" type="audio/mp3" alt="Lily Of The Valley-Daniel">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+
+      <!--Scripting for button filtering-->
+      <script>
+        filterSelection("")
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("column");
+          if (c == "all") c = "";
+          for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+          }
+        }
+        // Show filtered elements //
+        function w3AddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+          }
+        }
+        // Hide elements that are not selected
+        function w3RemoveClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);    
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+        // Add active class to the current button (highlight it) //
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = document.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+      </script>
+  </body>
+</html>
